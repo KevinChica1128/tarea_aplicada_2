@@ -11,6 +11,10 @@ empleados1<-rbind(empleados1H,empleadis1M) #Me pone en una misma base de datos l
 #punto 1 y 2:
 modelo<-lm(empleados1$Peso~empleados1$Altura)
 summary(modelo)
+#Gráfica de regresión:
+x11()
+plot(empleados1$Altura, empleados1$Peso, xlab = "Estatura", ylab = "Peso")
+abline(modelo,col="Red")
 
 #punto 3:
 sigma2<-summary(modelo)$sigma^2
