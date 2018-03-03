@@ -31,10 +31,10 @@ library("car")
 sexocodificado<- recode(empleados1$Sexo, '"Hombre"=1; "Mujer"=0; ;', as.factor.result=TRUE)
 empleados1<-cbind(empleados1,sexocodificado)
 #Modelo con la variable sexo:
-modelosex<-lm(empleados1$Altura~empleados1$Peso+empleados1$sexocodificado)
+modelosex<-lm(empleados1$Peso~empleados1$Altura+empleados1$sexocodificado)
 summary(modelosex)
 
 #punto 6:
 #Modelo con la variable edad:
-modeloSE<-lm(empleados1$Altura~empleados1$Peso+empleados1$Edad+empleados1$sexocodificado)
+modeloSE<-lm(empleados1$Peso~empleados1$Altura+empleados1$Edad+empleados1$sexocodificado)
 summary(modeloSE)
