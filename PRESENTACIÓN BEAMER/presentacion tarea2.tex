@@ -71,7 +71,20 @@ de 99 personas, 12 de ellas mujeres. De esas 99 personas debíamos seleccionar u
 \end{frame}
 \begin{frame}
 \frametitle{Punto 5:Comparación de modelos}
-
+\begin{table}[!htb]
+\caption{Tabla comparativa entre los modelos ajustados}\label{Tabla1}
+\begin{center}
+\begin{tabular}{ccc}
+\hline
+ & Peso-Altura & Peso-Altura,Sexo \\ 
+\hline
+$R^2_{ajustado}$ & 0.5561 & 0.5776 \\ 
+ 
+$CME=\sigma^2$ & 77.33809 & 73.59097 \\ 
+\hline 
+\end{tabular}
+\end{center}
+\end{table}
 \end{frame}
 
 \begin{frame}
@@ -80,7 +93,24 @@ de 99 personas, 12 de ellas mujeres. De esas 99 personas debíamos seleccionar u
 ~\\ $$Peso=-102.6256+0.8759 Altura +0.9867 Edad +4.4248 Sexo $$
 \end{frame}
 
-
+\begin{frame}
+\frametitle{Punto 6:Comparación de todos los modelos}
+\begin{table}[!htb]
+\centering
+\caption{Tabla comparativa entre los modelos ajustados}\label{Tabla1}
+\resizebox{12cm}{!} {
+\begin{tabular}{cccc}
+\hline
+ &Peso-Altura&Peso-Altura,Sexo&Peso-Altura,Sexo,Edad \\ 
+\hline
+$R^2_{ajustado}$ &0.5561&0.5776&0.5788 \\ 
+ 
+$CME=\sigma^2$ &77.33809&73.59097&73.38099 \\ 
+\hline 
+\end{tabular}
+}
+\end{table}
+\end{frame}
 
 
 \end{document}
