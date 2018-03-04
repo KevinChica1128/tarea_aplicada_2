@@ -7,6 +7,8 @@ sample(1:87,12) #Me genera 12 números aleatorios, correspondientes a los hombres
 #Los generados fueron: (10,29,9,13,47,45,2,79,69,15,41,3)
 empleados1H<-empleados1H[c(10,29,9,13,47,45,2,79,69,15,41,3),] #Muestra de 12 hombres obtenida
 empleados1<-rbind(empleados1H,empleados1M) #Me pone en una misma base de datos los hombres y la mujeres, esta será nuestra base de datos final.
+#Descriptivas peso y estatura:
+rbind(Peso=summary(empleados1$Peso),Altura=summary(empleados1$Altura),Edad=summary(empleados1$Edad))
 
 #punto 1 y 2:
 modelo<-lm(empleados1$Peso~empleados1$Altura)
@@ -14,7 +16,7 @@ summary(modelo)$sigma^2
 
 #Gráfica de regresión:
 x11()
-plot(empleados1$Altura, empleados1$Peso, xlab = "Estatura", ylab = "Peso")
+plot(empleados1$Altura, empleados1$Peso, xlab = "Estatura", ylab = "Peso",col="Black",pch=16)
 abline(modelo,col="Red")
 
 #punto 3:

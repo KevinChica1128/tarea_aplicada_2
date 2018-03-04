@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.23)  24 FEB 2018 14:08
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.23)  3 MAR 2018 19:55
 entering extended mode
-**"./Tarea1 Estadistica Aplicada.tex"
-("Tarea1 Estadistica Aplicada.tex"
+**"./Tarea2 Estadistica Aplicada.tex"
+("Tarea2 Estadistica Aplicada.tex"
 LaTeX2e <2016/03/31> patch level 3
 Babel <3.9r> and hyphenation patterns for 75 language(s) loaded.
 (revcoles.cls
@@ -292,18 +292,11 @@ Package: harvard
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )))
-("Tarea1 Estadistica Aplicada.aux"
-LaTeX Info: Redefining \. on input line 6.
-LaTeX Info: Redefining \% on input line 6.
-
-
-LaTeX Warning: Label `figura3' multiply defined.
-
-
-LaTeX Warning: Label `tabla2' multiply defined.
-
+("Tarea2 Estadistica Aplicada.aux"
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
 )
-\openout1 = `"Tarea1 Estadistica Aplicada.aux"'.
+\openout1 = `"Tarea2 Estadistica Aplicada.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
@@ -394,152 +387,67 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 
 LaTeX Warning: Characters dropped after `\end{comment}' on input line 126.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 138.
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
+
+ []
+
+<FigurasUV/1.pdf, id=1, 1027.84pt x 545.03625pt>
+File: FigurasUV/1.pdf Graphic file (type pdf)
+ <use FigurasUV/1.pdf>
+Package pdftex.def Info: FigurasUV/1.pdf used on input line 140.
+(pdftex.def)             Requested size: 462.52373pt x 245.26405pt.
+
+Overfull \hbox (7.27965pt too wide) in paragraph at lines 140--141
+ [][] 
+ []
+
+[1
+
+{C:/Users/KEVINSTEVEN/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 149.
+
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 138.
- [1
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 149.
 
-{C:/Users/KEVINSTEVEN/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (14.97127pt too wide) in paragraph at lines 154--154
- []\T1/cmr/m/n/9 Variable/Estadisticos 
- []
-
-
-Overfull \hbox (0.53783pt too wide) in paragraph at lines 157--157
- []\T1/cmr/m/n/9 Mediana 
- []
-
-
-Overfull \hbox (4.72624pt too wide) in paragraph at lines 158--158
- []\T1/cmr/m/n/9 Media. 
- []
-
-
-Overfull \hbox (2.66074pt too wide) in paragraph at lines 153--169
- [][] 
- []
-
-<FigurasUV/1.pdf, id=14, 1027.84pt x 545.03625pt>
-File: FigurasUV/1.pdf Graphic file (type pdf)
- <use FigurasUV/1.pdf>
-Package pdftex.def Info: FigurasUV/1.pdf used on input line 180.
-(pdftex.def)             Requested size: 462.52373pt x 245.26405pt.
-
-Overfull \hbox (7.27965pt too wide) in paragraph at lines 180--181
-[][] 
- []
-
-[2] <FigurasUV/2.pdf, id=20, 1027.84pt x 545.03625pt>
-File: FigurasUV/2.pdf Graphic file (type pdf)
- <use FigurasUV/2.pdf>
-Package pdftex.def Info: FigurasUV/2.pdf used on input line 186.
-(pdftex.def)             Requested size: 462.52373pt x 245.26405pt.
-
-Overfull \hbox (7.27965pt too wide) in paragraph at lines 186--187
-[][] 
- []
-
-[3 <./FigurasUV/1.pdf> <./FigurasUV/2.pdf>]
-
-LaTeX Warning: Citation 'G' on page 4 undefined on input line 194.
-
-<FigurasUV/sandiego.png, id=32, 188.95593pt x 129.48375pt>
-File: FigurasUV/sandiego.png Graphic file (type png)
-
-<use FigurasUV/sandiego.png>
-Package pdftex.def Info: FigurasUV/sandiego.png used on input line 197.
-(pdftex.def)             Requested size: 226.74597pt x 155.3797pt.
-
-<FigurasUV/sanfransisco.png, id=33, 258.21469pt x 172.39406pt>
-File: FigurasUV/sanfransisco.png Graphic file (type png)
-
-<use FigurasUV/sanfransisco.png>
-Package pdftex.def Info: FigurasUV/sanfransisco.png used on input line 202.
-(pdftex.def)             Requested size: 219.4835pt x 146.53563pt.
- [4 <./FigurasUV/sandiego.png> <./FigurasUV/sanfransisco.png>]
-Overfull \hbox (6.3397pt too wide) in paragraph at lines 215--215
- []\T1/cmr/m/n/9 Ingreso 
- []
-
-
-Overfull \hbox (17.54333pt too wide) in paragraph at lines 217--217
- []\T1/cmr/m/n/9 Habitaciones 
- []
-
-
-Overfull \hbox (25.4954pt too wide) in paragraph at lines 218--218
- []\T1/cmr/m/n/9 Dormitorios 
- []
-
-
-Overfull \hbox (16.66843pt too wide) in paragraph at lines 219--219
- []\T1/cmr/m/n/9 Población 
- []
-
-
-Overfull \hbox (16.28728pt too wide) in paragraph at lines 249--249
- []\T1/cmr/m/n/9 Completo 
- []
-
-
-Overfull \hbox (10.54488pt too wide) in paragraph at lines 250--250
- []\T1/cmr/m/n/9 Forward 
- []
-
-
-Overfull \hbox (16.94609pt too wide) in paragraph at lines 251--251
- []\T1/cmr/m/n/9 Backward 
- []
-
-[5] ("Tarea1 Estadistica Aplicada.bbl" [6]) [7]
-("Tarea1 Estadistica Aplicada.aux"
-LaTeX Info: Redefining \. on input line 6.
-LaTeX Info: Redefining \% on input line 6.
-)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+("Tarea2 Estadistica Aplicada.bbl" [2 <./FigurasUV/1.pdf>]) [3]
+("Tarea2 Estadistica Aplicada.aux"
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
+) ) 
 Here is how much of TeX's memory you used:
- 5333 strings out of 493334
- 74179 string characters out of 3139234
- 150182 words of memory out of 3000000
- 8743 multiletter control sequences out of 15000+200000
- 22488 words of font info for 62 fonts, out of 3000000 for 9000
+ 5284 strings out of 493334
+ 73345 string characters out of 3139234
+ 145764 words of memory out of 3000000
+ 8699 multiletter control sequences out of 15000+200000
+ 21912 words of font info for 66 fonts, out of 3000000 for 9000
  1145 hyphenation exceptions out of 8191
- 43i,11n,40p,910b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\d
-pi600\ecti0700.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljfo
-ur\jknappen\ec\dpi600\ecti1000.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2
-.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\Users\KEVINSTEVEN\AppDat
-a\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\Users\KE
-VINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc0900.
-pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
-dpi600\ecti0900.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
-our\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\
-2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600.pk> <C:\Users\KEVINSTEVEN\AppDa
-ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\Users\K
-EVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0700
+ 43i,8n,40p,686b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\
+dpi600\ecti1000.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljf
+our\jknappen\ec\dpi600\eccc0900.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\
+2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecti0900.pk> <C:\Users\KEVINSTEVEN\AppDa
+ta\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0800.pk> <C:\Users\K
+EVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0600
 .pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec
-\dpi600\eccc1000.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\lj
-four\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX
-\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm0900.pk> <C:\Users\KEVINSTEVEN\AppD
-ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx0900.pk><C:/Program
- Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmmi9.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Tarea1 Estadistica Aplicada.pdf" (7 pages, 414062 bytes).
+\dpi600\ecrm1000.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\lj
+four\jknappen\ec\dpi600\ecrm0700.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX
+\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\eccc1000.pk> <C:\Users\KEVINSTEVEN\AppD
+ata\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1440.pk> <C:\Users\
+KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm090
+0.pk> <C:\Users\KEVINSTEVEN\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\jknappen\e
+c\dpi600\ecbx0900.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "Tarea2 Estadistica Aplicada.pdf" (3 pages, 143961 bytes).
 PDF statistics:
- 476 PDF objects out of 1000 (max. 8388607)
+ 347 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
