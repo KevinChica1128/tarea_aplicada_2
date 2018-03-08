@@ -154,11 +154,57 @@ de grado.tex}) and can be used as a guideline just replacing its contents. It is
 \end{itemize}
 
 \section{Punto 3:Intervalos de confianza para $\beta_{0}$ y $\beta_{1}$}
-~\\ Para generar los intervalos de confianza
+~\\ Para generar los intervalos de confianza, utilizamos directamente la función confint en R, los intervalos generados fueron los siguientes:
+\begin{itemize}
+\item ${\beta_{0}}_{95\%}=(-163.4559651 ; -34.60997)$
+\item ${\beta_{1}}_{95\%}=(0.6064059  ; 1.34922)$
+\end{itemize}
 
 \section{Punto 4:Inclusión de la variable 'Sexo' en el modelo}
-\section{Punto 5:Comparación de modelos}
+~\\ ~\\ Para incluir la variable sexo al modelo, generamos una variable indicadora (variable 'Dummy') que básicamente codifica la variable categórica (en nuestro caso es la variable 'Sexo') en términos binarios, la cual tomaba el valor 0 cuando es mujer y 1 cuando es hombre,además, es claro que la variable 'Altura', también depende del sexo de la persona (normalmente la media de la estatura de los hombres es mayor a la media de las mujeres), por lo cuál se tuvo en cuenta este cambio en la altura dependiendo del sexo, en pocas palabras, se tuvo en cuenta la interacción entre estas dos variables ('Altura' y 'Sexo'), el modelo ajustado incluyendo la variable 'Sexo' y teniendo en cuenta la interacción entre las variables 'Altura' y 'Sexo' fue el siguiente:
+~\\ $$Peso=-92.8094+0.9271 Altura+ 19.4939 Sexo -0.0813(Altura\cdot Sexo)$$
+\section{Punto 5:Interpretación y comparación de modelos}
+~\\ Poner interpretación de los betas
+
+~\\ Para comparar los modelos y decidir si uno es mejor que el otro, generamos la siguiente tabla, donde se comparan con respecto al $R^2_{ajustado}$ y al $CME=\sigma^2$ 
+\begin{table}[!htb]
+\caption{Tabla comparativa entre los modelos ajustados}\label{Tabla1}
+\begin{center}
+\begin{tabular}{ccc}
+\hline
+ & Peso-Altura & Peso-Altura,Sexo \\ 
+\hline
+$R^2_{ajustado}$ & 0.5561 & 0.5574 \\ 
+ 
+$CME=\sigma^2$ & 77.33809 & 77.10571 \\ 
+\hline 
+\end{tabular}
+\end{center}
+\end{table}
 \section{Punto 6:Inclusión de la variable 'Edad' en el modelo}
+~\\ El modelo ajustado incluyendo la variable 'Edad' es el siguiente:
+~\\ $$Peso=-108.63737+0.91223 Altura+14.77551 Sexo+0.97851 Edad-0.05999(Altura\cdot Sexo)$$
+
+~\\ Poner interpretacion de $\beta$'s
+
+~\\ Para comparar los tres modelos obtenidos, simplemente adicionamos este ultimo a la tabla comparativa, la cual quedo de la siguiente manera:
+\begin{table}[!htb]
+\centering
+\caption{Tabla comparativa entre los modelos ajustados}\label{Tabla1}
+\resizebox{12cm}{!} {
+\begin{tabular}{cccc}
+\hline
+ &Peso-Altura&Peso-Altura,Sexo&Peso-Altura,Sexo,Edad \\ 
+\hline
+$R^2_{ajustado}$ &0.5561&0.5574&0.5572 \\ 
+ 
+$CME=\sigma^2$ &77.33809&77.10571&77.14896 \\ 
+\hline 
+\end{tabular}
+}
+\end{table}
+
+
 
 % //// --------------------------------------------------------------------------------
 % -------------------------------------------------------------------------------------

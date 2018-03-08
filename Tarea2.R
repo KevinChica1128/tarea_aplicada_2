@@ -1,6 +1,6 @@
 #Tarea 2 aplicada
 library(readxl)
-empleados1 <- read_excel("GitHub/tarea_aplicada_2/empleados1.xlsx")
+empleados1 <- read_excel("empleados1.xlsx")
 empleados1M<-empleados1[c(4,10,12,26,28,33,43,45,56,71,79,95),]
 empleados1H<-empleados1[-c(4,10,12,26,28,33,43,45,56,71,79,95),] #Me deja solo los hombres para hacer el muestreo
 sample(1:87,12) #Me genera 12 números aleatorios, correspondientes a los hombres que vamos a muestrear
@@ -30,24 +30,31 @@ alfa=0.05
 intervalo<-c(B0+qt(alfa/2,24-2)*sqrt(Cjj[1,1]*sigma2),B0-qt(alfa/2,24-2)*sqrt(Cjj[1,1]*sigma2))
 #Intervalo para B1:
 intervalo1<-c(B1+qt(alfa/2,24-2)*sqrt(Cjj[2,2]*sigma2),B1-qt(alfa/2,24-2)*sqrt(Cjj[2,2]*sigma2))
-
-
+#Con la función de R:
+confint(modelo,level = 0.95)
 #punto 4 y 5:
 #Vamos a representar los hombres con 1 y las mujeres con 0
 library("car")
 sexocodificado<- recode(empleados1$Sexo, '"Hombre"=1; "Mujer"=0; ;', as.factor.result=TRUE)
 empleados1<-cbind(empleados1,sexocodificado)
 
-#Modelo con la variable sexo:
-modelosex<-lm(empleados1$Peso~empleados1$Altura+empleados1$sexocodificado)
-summary(modelosex)$sigma^2
+#Modelo teniendo en cuenta la interacción entre el sexo y la altura:
+x3<-c(200,174,181,173,172,179,168,167,165,170,179,194,0,0,0,0,0,0,0,0,0,0,0,0)
+modeloint<-lm(empleados1$Peso~empleados1$Altura+empleados1$sexocodificado+x3)
+summary(modeloint)
 
 
 #punto 6:
 #Modelo con la variable edad:
-modeloSE<-lm(empleados1$Peso~empleados1$Altura+empleados1$Edad+empleados1$sexocodificado)
+modeloSE<-lm(empleados1$Peso~empleados1$Altura+empleados1$sexocodificado+x3+empleados1$Edad)
 summary(modeloSE)$sigma^2
 
 
+#--------------------------------------------------------------#
 
 
+
+modeloMujeres<-lm(empleados1M$Peso~empleados1M$Altura)
+modeloHombres<-lm(empleados1H$Peso~empleados1H$Altura)
+summary(modeloMujeres)
+summary(modeloHombres)
