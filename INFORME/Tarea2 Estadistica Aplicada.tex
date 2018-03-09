@@ -170,6 +170,7 @@ Y:'Peso' es explicada por la variable X:'Estatura'
 \section{Punto 4:Inclusión de la variable 'Sexo' en el modelo}
 ~\\ ~\\ Para incluir la variable sexo al modelo, generamos una variable indicadora (variable 'Dummy') que básicamente codifica la variable categórica (en nuestro caso es la variable 'Sexo') en términos binarios, la cual tomaba el valor 0 cuando es mujer y 1 cuando es hombre,además, es claro que la variable 'Altura', también depende del sexo de la persona (normalmente la media de la estatura de los hombres es mayor a la media de las mujeres), por lo cuál se tuvo en cuenta este cambio en la altura dependiendo del sexo, en pocas palabras, se tuvo en cuenta la interacción entre estas dos variables ('Altura' y 'Sexo'), el modelo ajustado incluyendo la variable 'Sexo' y teniendo en cuenta la interacción entre las variables 'Altura' y 'Sexo' fue el siguiente:
 ~\\ $$Peso=-92.8094+0.9271 Altura+ 19.4939 Sexo -0.0813(Altura\cdot Sexo)$$
+
 \section{Punto 5:Interpretación y comparación de modelos}
 ~\\ Como lo mencionamos, se hizo una codificación de la variable sexo, donde vale 1 si es hombre y 0 si es mujer, por lo cual, podemos obtener dos modelos o mejor, dos interpretaciones, una para cada sexo:
 ~\\ Cuando el empleado es mujer (sexo=0), el modelo quedaría de la siguiente forma:
@@ -188,6 +189,11 @@ $$Peso=-73.3155+0.8459Altura$$
 \item $\beta_{3}=-0.0813$: Con este coeficiente hay que tener cuidado en su interpretación. Primero, si es hombre (Sexo=1), al coeficiente original de la altura (0.9271) se le restara 0.0813, lo cuál daría 0.8458, es decir, si el sexo es masculino, la influencia de la altura en el Peso, disminuiría a 0.8458 kgms por centímetro adicional de altura.Si es mujer (Sexo=0), no generaría ningún cambio en el coeficiente de la altura.
 ~\\ Resumiendo, el coeficiente $\beta_3$ mide el cambio en la influencia de la altura en el peso, por sexo. 
 
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[scale=0.45]{FigurasUV/3.pdf}
+  \caption{Gráfica de dispersión con la recta de regresión ajustada por sexo}\label{figura1}
+\end{figure}
 \end{itemize}
 
 ~\\ Para comparar los modelos y decidir si uno es mejor que el otro, generamos la siguiente tabla, donde se comparan con respecto al $R^2_{ajustado}$ y al $CME=\sigma^2$ 
@@ -205,11 +211,13 @@ $CME=\sigma^2$ & 77.33809 & 77.10571 \\
 \end{tabular}
 \end{center}
 \end{table}
+
+~\\Podemos apreciar que el $R^2$ y el $CME=\sigma^2$ no son muy diferentes entre los dos modelos sin embargo podemos decir que el modelo donde incluimos la variable sexo es un poco mejor que el otro, ya que se ve, aunque no en gran medida que el $R^2$ es mayor y el CME menor, lo cual indica que este explica un poco mejor el comportamiento de la variable.
 \section{Punto 6:Inclusión de la variable 'Edad' en el modelo}
 ~\\ El modelo ajustado incluyendo la variable 'Edad' es el siguiente:
 ~\\ $$Peso=-108.63737+0.91223 Altura+14.77551 Sexo+0.97851 Edad-0.05999(Altura\cdot Sexo)$$
 
-~\\ Poner interpretacion de $\beta$'s
+~\\ Con respecto a la interpretación de los coeficientes de este modelo, son exactamente igual al modelo del punto 5 (teniendo en cuenta el cambio en los valores de los coeficientes, por el ingreso de la nueva variable), solo añadimos la variable edad, este coeficiente nos dice que mientras todas las otras variables estén constantes, por un año adicional en la edad del empleado, su peso aumentará en aproximadamente 0.97851 kilogramos.
 
 ~\\ Para comparar los tres modelos obtenidos, simplemente adicionamos este ultimo a la tabla comparativa, la cual quedo de la siguiente manera:
 \begin{table}[!htb]
@@ -228,6 +236,8 @@ $CME=\sigma^2$ &77.33809&77.10571&77.14896 \\
 }
 \end{table}
 
+~\\ En la tabla anterior, tuvimos en cuenta el $R^2_{ajustado}$ y el $CME=\sigma^2$ para comparar los tres modelos generados. Podemos ver que el modelo con la Altura, el Sexo y la interacción entre ambas sigue siendo el mejor, aunque la diferencia no es muy grande. Esto nos dice que la variable Edad, no ayuda a explicar la variable de respuesta 'Peso'.
+~\\ También, el $R^2$ es muy bajo, por lo cuál se deberían pensar en posible nuevas variables para explicar el peso de una persona, se nos ocurren variables como por ejemplo, horas dedicadas al ejercicio, cantidad de comida ingerida diaria,inclusive se podría pensar en la contextura de sus antepasados como variable predictiva. En pocas palabras, se deberían buscar nuevas variables para armar un buen modelo que permita predecir de manera adecuada el peso de los empleados.
 
 
 % //// --------------------------------------------------------------------------------

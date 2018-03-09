@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.23)  8 MAR 2018 16:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.9.23)  9 MAR 2018 14:56
 entering extended mode
 **"./presentacion tarea2.tex"
 ("presentacion tarea2.tex"
@@ -1329,15 +1329,15 @@ File: ot1mathkerncmss.fd 2013/03/27 Fontinst v1.933 font definitions for OT1/ma
 thkerncmss.
 ) [3
 
-] <imagenes/1.png, id=106, 1371.1225pt x 727.71875pt>
-File: imagenes/1.png Graphic file (type png)
+] <imagenes/1.pdf, id=106, 1027.84pt x 545.03625pt>
+File: imagenes/1.pdf Graphic file (type pdf)
 
-<use imagenes/1.png>
-Package pdftex.def Info: imagenes/1.png used on input line 46.
-(pdftex.def)             Requested size: 312.9803pt x 166.10593pt.
+<use imagenes/1.pdf>
+Package pdftex.def Info: imagenes/1.pdf used on input line 46.
+(pdftex.def)             Requested size: 312.9803pt x 165.96553pt.
  [4
 
- <./imagenes/1.png>] [5
+ <./imagenes/1.pdf>] [5
 
 ] [6
 
@@ -1390,8 +1390,8 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 117.
  ) 
 Here is how much of TeX's memory you used:
- 17857 strings out of 493334
- 340207 string characters out of 3139234
+ 17856 strings out of 493334
+ 340203 string characters out of 3139234
  418542 words of memory out of 3000000
  20934 multiletter control sequences out of 15000+200000
  13458 words of font info for 49 fonts, out of 3000000 for 9000
@@ -1405,9 +1405,9 @@ onts/type1/public/amsfonts/cm/cmss8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/public/amsfonts/cm/cmssi12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmssi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
 ts/cm/cmsy10.pfb>
-Output written on "presentacion tarea2.pdf" (10 pages, 154605 bytes).
+Output written on "presentacion tarea2.pdf" (10 pages, 150881 bytes).
 PDF statistics:
- 327 PDF objects out of 1000 (max. 8388607)
+ 330 PDF objects out of 1000 (max. 8388607)
  23 named destinations out of 1000 (max. 500000)
  72 words of extra memory for PDF output out of 10000 (max. 10000000)
 

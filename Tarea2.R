@@ -20,10 +20,10 @@ plot(empleados1$Altura, empleados1$Peso, xlab = "Estatura", ylab = "Peso",col="B
 abline(modelo,col="Red")
 
 x11()
-plot(empleados1H$Altura,empleados1H$Peso,xlab = "Estatura", ylab = "Peso",col="Blue",pch=16)
+plot(empleados1H$Altura,empleados1H$Peso,ylim=c(50,105),xlim = c(155,200),xlab = "Estatura", ylab = "Peso",col="Blue",pch=16)
 abline(modelo,col="Red")
-points(empleados1M$Altura,empleados1M$Peso,pch=2,col="Green")
-
+points(empleados1M$Altura,empleados1M$Peso,pch=16,col="Green")
+legend("topright",legend=c("Hombre","Mujer"),col=c("Blue","Green"),pch=c(16,16))
 #punto 3:
 sigma2<-summary(modelo)$sigma^2
 x<-matrix(c(rep(1,24),empleados1$Altura),ncol = 2,nrow = 24)
@@ -48,7 +48,13 @@ x3<-c(200,174,181,173,172,179,168,167,165,170,179,194,0,0,0,0,0,0,0,0,0,0,0,0)
 modeloint<-lm(empleados1$Peso~empleados1$Altura+empleados1$sexocodificado+x3)
 summary(modeloint)
 
-
+#Gráfica con ambas rectas ajustadas
+x11()
+plot(empleados1H$Altura,empleados1H$Peso,ylim=c(50,105),xlim = c(155,200),xlab = "Estatura", ylab = "Peso",col="Blue",pch=16)
+abline(modeloHombres,col="Blue")
+abline(modeloMujeres,col="Green")
+points(empleados1M$Altura,empleados1M$Peso,pch=16,col="Green")
+legend("topright",legend=c("Hombre","Mujer"),col=c("Blue","Green"),pch=c(16,16))
 #punto 6:
 #Modelo con la variable edad:
 modeloSE<-lm(empleados1$Peso~empleados1$Altura+empleados1$sexocodificado+x3+empleados1$Edad)
@@ -56,8 +62,6 @@ summary(modeloSE)$sigma^2
 
 
 #--------------------------------------------------------------#
-
-
 
 modeloMujeres<-lm(empleados1M$Peso~empleados1M$Altura)
 modeloHombres<-lm(empleados1H$Peso~empleados1H$Altura)
