@@ -19,6 +19,11 @@ x11()
 plot(empleados1$Altura, empleados1$Peso, xlab = "Estatura", ylab = "Peso",col="Black",pch=16)
 abline(modelo,col="Red")
 
+x11()
+plot(empleados1H$Altura,empleados1H$Peso,xlab = "Estatura", ylab = "Peso",col="Blue",pch=16)
+abline(modelo,col="Red")
+points(empleados1M$Altura,empleados1M$Peso,pch=2,col="Green")
+
 #punto 3:
 sigma2<-summary(modelo)$sigma^2
 x<-matrix(c(rep(1,24),empleados1$Altura),ncol = 2,nrow = 24)
