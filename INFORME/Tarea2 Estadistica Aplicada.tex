@@ -146,25 +146,49 @@ de grado.tex}) and can be used as a guideline just replacing its contents. It is
 \section{Punto 2:Bondad del modelo e interpretaciones}
 ~\\ Con respecto a las interpretaciones del modelo, se obtuvieron los valores p, de cada una de las pruebas de significancia para los coeficientes del modelo ($\beta_{0}$ y $\beta_{1}$), y se obtuvo el $R^2$.
 \begin{itemize}
-\item $\beta_{0}=-99.0330$:
-\item $\beta_{1}=0.9778$:
-\item $R^2=0.5754$:
-\item p-valor $\beta_{0}=0.00425$: 
-\item p-valor $\beta_{1}=0.0000174$:
+\item $\beta_{0}=-99.0330$: Este valor del intercepto es para un mejor ajuste
+del modelo teniendo en cuenta que no tenemos alturas negativas
+nos ayuda a ajustar el peso en función de la altura, en pocas palabras, sirve de balanceo o de ajuste para una predicción mas acertada.
+\item $\beta_{1}=0.9778$: Cuando la variable 'Estatura', aumenta en una unidad (1 centimetro), se espera que el 'Peso' de la persona aumente en 0.9778 kg.
+\item $R^2=0.5754$: El 57.54\% de la variabilidad total de la variable
+Y:'Peso' es explicada por la variable X:'Estatura'
+\item p-valor $\beta_{0}=0.00425$: Como mi p-valor es menor que 0.05 rechazo mi hipótesis nula y digo que $\beta_{0}$ si es significante para el modelo
+\item p-valor $\beta_{1}=0.0000174$: Como mi p-valor es menor que 0.05 rechazo mi hipótesis nula y digo que $\beta_{1}$ si es significante para el modelo
 \end{itemize}
+
+~\\Según las medidas calculadas para el modelo tomando como primer punto el $R^2$, podríamos decir que no se ajusta muy bien ya que el valor de 0.5754 es aún muy bajo para las variables que queremos explicar. Algo curioso fue que el intercepto da un valor negativo, esto se puede deber a que como el modelo trata de ajustarse a los datos y tenemos datos un poco dispersos el intercepto trata de balancear esto, además no hay alturas menores que 150 cm ni pesos (Kgs) muy grandes por ende este ubica mi modelo en cierto punto para poder ajustarlo de manera correcta. Con respecto a los p-valores obtenidos podemos ver que en los dos casos nuestro p-valor es bastante bajo lo que es bueno, ya que basados en la hipótesis nula de que nuestros coeficientes son iguales a 0, con un valor tan bajo podemos rechazar con confianza esta hipótesis y decir que nuestros coeficientes son significativos para el modelo.
+
 
 \section{Punto 3:Intervalos de confianza para $\beta_{0}$ y $\beta_{1}$}
 ~\\ Para generar los intervalos de confianza, utilizamos directamente la función confint en R, los intervalos generados fueron los siguientes:
 \begin{itemize}
-\item ${\beta_{0}}_{95\%}=(-163.4559651 ; -34.60997)$
-\item ${\beta_{1}}_{95\%}=(0.6064059  ; 1.34922)$
+\item ${\beta_{0}}_{95\%}=(-163.4559651 ; -34.60997)$ : El verdadero valor de $\beta_{0}$ está entre -163.456 y -34.610 con una confianza del 95\%
+\item ${\beta_{1}}_{95\%}=(0.6064059  ; 1.34922)$ : El verdadero valor de $\beta_{1}$ está entre 0.6064 y 1.3492 con una confianza del 95\%
 \end{itemize}
 
+~\\Podemos notar que el valor del intercepto real siempre viene siendo negativo, sin embargo el intervalo obtenido es demasiado amplio por lo que aproximarse al verdadero valor del parámetro es difícil. Ahora respecto a la pendiente podemos ver que es mayor que 0 y menor que 2, y este si tiene una amplitud mucho más reducida por lo que es más certera una estimación puntual de este.
 \section{Punto 4:Inclusión de la variable 'Sexo' en el modelo}
 ~\\ ~\\ Para incluir la variable sexo al modelo, generamos una variable indicadora (variable 'Dummy') que básicamente codifica la variable categórica (en nuestro caso es la variable 'Sexo') en términos binarios, la cual tomaba el valor 0 cuando es mujer y 1 cuando es hombre,además, es claro que la variable 'Altura', también depende del sexo de la persona (normalmente la media de la estatura de los hombres es mayor a la media de las mujeres), por lo cuál se tuvo en cuenta este cambio en la altura dependiendo del sexo, en pocas palabras, se tuvo en cuenta la interacción entre estas dos variables ('Altura' y 'Sexo'), el modelo ajustado incluyendo la variable 'Sexo' y teniendo en cuenta la interacción entre las variables 'Altura' y 'Sexo' fue el siguiente:
 ~\\ $$Peso=-92.8094+0.9271 Altura+ 19.4939 Sexo -0.0813(Altura\cdot Sexo)$$
 \section{Punto 5:Interpretación y comparación de modelos}
-~\\ Poner interpretación de los betas
+~\\ Como lo mencionamos, se hizo una codificación de la variable sexo, donde vale 1 si es hombre y 0 si es mujer, por lo cual, podemos obtener dos modelos o mejor, dos interpretaciones, una para cada sexo:
+~\\ Cuando el empleado es mujer (sexo=0), el modelo quedaría de la siguiente forma:
+$$Peso=-92.8094+0.9271Altura $$
+~\\ donde $\beta_{0}$ es el intercepto, el cuál balancea o sirve para acercar más los valores ajustados a los reales, y $\beta_{1}=0.9271$ nos dice que por cada centímetro adicional de la altura de una mujer, su peso aumenta en 0.9271 kilogramos aproximadamente.
+~\\Ahora, cuando el empleado es hombre (sexo=1), el modelo quedaría de la siguiente forma:
+$$Peso=-73.3155+0.8459Altura$$
+
+~\\ Podemos notar que el intercepto aumenta, y el coeficiente correspondiente a la variable 'Altura' ($\beta_{1}$) disminuye.
+~\\ Este modelo nos dice que por cada centímetro adicional en la altura de un hombre, su peso aumentará aproximadamente en 0.8459 kilogramos.
+
+~\\Note que los dos modelos se desprenden del modelo general, solo se reemplazan los dos posibles valores en la variable sexo. interpretando los valores en el modelo general tendríamos lo siguiente:
+\begin{itemize}
+\item $\beta_{1}=0.9271$: por cada centímetro que aumente un empleado, sea mujer o hombre, su peso aumentara en 0.9271 kilogramos siempre y cuando todas las otras variables sean 0.
+\item $\beta_{2}=19.4939$: Si el empleado es hombre (Sexo=1), su peso aumentará en promedio 19.4939 kilogramos, suponiendo que todas las otras variables son 0. Si el empleado es mujer (Sexo=0), su peso no aumentará. 
+\item $\beta_{3}=-0.0813$: Con este coeficiente hay que tener cuidado en su interpretación. Primero, si es hombre (Sexo=1), al coeficiente original de la altura (0.9271) se le restara 0.0813, lo cuál daría 0.8458, es decir, si el sexo es masculino, la influencia de la altura en el Peso, disminuiría a 0.8458 kgms por centímetro adicional de altura.Si es mujer (Sexo=0), no generaría ningún cambio en el coeficiente de la altura.
+~\\ Resumiendo, el coeficiente $\beta_3$ mide el cambio en la influencia de la altura en el peso, por sexo. 
+
+\end{itemize}
 
 ~\\ Para comparar los modelos y decidir si uno es mejor que el otro, generamos la siguiente tabla, donde se comparan con respecto al $R^2_{ajustado}$ y al $CME=\sigma^2$ 
 \begin{table}[!htb]
