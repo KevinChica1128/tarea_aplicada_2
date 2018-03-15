@@ -57,12 +57,14 @@ points(empleados1M$Altura,empleados1M$Peso,pch=16,col="Green")
 legend("topright",legend=c("Hombre","Mujer"),col=c("Blue","Green"),pch=c(16,16))
 #punto 6:
 #Modelo con la variable edad:
+x4<-c(21,18,24,18,19,18,18,23,23,19,18,19,0,0,0,0,0,0,0,0,0,0,0,0)
 modeloSE<-lm(empleados1$Peso~empleados1$Altura+empleados1$sexocodificado+x3+empleados1$Edad)
 summary(modeloSE)$sigma^2
-
-
+#teniendo en cuenta la interacción entre sexo y edad:
+modelointeraccion<-lm(empleados1$Peso~empleados1$Altura+empleados1$sexocodificado+x3+empleados1$Edad+x4)
+summary(modelointeraccion)
 #--------------------------------------------------------------#
-
+cor(empleados1$Edad,empleados1$Peso)
 modeloMujeres<-lm(empleados1M$Peso~empleados1M$Altura)
 modeloHombres<-lm(empleados1H$Peso~empleados1H$Altura)
 summary(modeloMujeres)
